@@ -1,3 +1,3 @@
-# gis-utils
+# gc-utils
 
-### Geographic Information System (GIS) utility scripts for various purposes (mostly Geocaching).
+### Utility scripts for various purposes (mostly Geocaching).
