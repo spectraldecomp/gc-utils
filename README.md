@@ -1,4 +1,4 @@
-![lofo](https://github.com/spectraldecomp/gc-utils/gc_utils/gc_utils/data/public/gc-utils-logo.png
+![lofo](https://github.com/spectraldecomp/gc-utils/blob/main/gc_utils/gc_utils/data/public/gc-utils-logo.png)
 ---
 gc-utils is a Python package offering a suite of tools for Geocaching puzzle creation/solving and GIS-related tasks.
 
