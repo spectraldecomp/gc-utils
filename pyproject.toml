@@ -27,7 +27,7 @@ dependencies = []
 "Bug Tracker" = "https://github.com/spectraldecomp/geocaching-utils/issues"
 
 [project.scripts]
-geocaching-utils = "geocaching_utils.cli.main:main"
+gc-utils = "geocaching_utils.cli.main:main"
 
 [tool.setuptools]
 packages = ["geocaching_utils", "geocaching_utils.cli", "geocaching_utils.utils", "geocaching_utils.tests"]

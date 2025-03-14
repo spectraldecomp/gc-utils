@@ -1,5 +1,5 @@
 """
-Main CLI entry point for geocaching-utils.
+Main CLI entry point for gc-utils.
 """
 import argparse
 import sys
@@ -8,14 +8,14 @@ from geocaching_utils import __version__
 
 
 def main():
-    """Main CLI entry point for geocaching-utils."""
+    """Main CLI entry point for gc-utils."""
     parser = argparse.ArgumentParser(
-        prog="geocaching-utils",
+        prog="gc-utils",
         description="Geocaching puzzle utilities and tools"
     )
 
     parser.add_argument('--version', action='version',
-                        version=f'geocaching-utils {__version__}')
+                        version=f'gc-utils {__version__}')
 
     subparsers = parser.add_subparsers(
         dest='command', help='Available commands')
