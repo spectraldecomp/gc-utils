@@ -3,7 +3,7 @@ Tests for the geometry module.
 """
 import unittest
 import math
-from gc_utils.utils import geometry, coordinates
+from geocaching_utils.utils import geometry, coordinates
 
 
 class GeometryTests(unittest.TestCase):

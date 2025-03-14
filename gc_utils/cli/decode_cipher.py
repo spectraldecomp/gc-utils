@@ -2,7 +2,7 @@
 CLI command for decoding various ciphers.
 """
 import argparse
-from gc_utils.utils import ciphers
+from geocaching_utils.utils import ciphers
 
 
 def register_subcommand(subparsers):
@@ -54,7 +54,7 @@ def handle(args):
         result = ciphers.vigenere_decode(text, key=args.key)
     elif method == 'atbash':
         # Import the atbash cipher function from puzzle_helpers
-        from gc_utils.utils.puzzle_helpers import atbash_cipher
+        from geocaching_utils.utils.puzzle_helpers import atbash_cipher
         result = atbash_cipher(text)
     elif method == 'morse':
         result = ciphers.morse_decode(text)

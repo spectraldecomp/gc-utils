@@ -1,6 +1,6 @@
-![logo](https://github.com/spectraldecomp/gc-utils/blob/main/gc_utils/data/public/gc-utils-logo.png)
+![logo](https://github.com/spectraldecomp/geocaching-utils/blob/main/geocaching_utils/data/public/geocaching-utils-logo.png)
 ---
-gc-utils is a Python package offering a suite of tools for Geocaching puzzle creation/solving and GIS-related tasks.
+geocaching-utils is a Python package offering a suite of tools for Geocaching puzzle creation/solving and GIS-related tasks.
 
 ## Features
 
@@ -38,110 +38,110 @@ For Windows users, we provide a PowerShell installation script:
 
 ```powershell
 # Clone the repository
-git clone https://github.com/spectraldecomp/gc-utils.git
-cd gc-utils
+git clone https://github.com/spectraldecomp/geocaching-utils.git
+cd geocaching-utils
 
 # Run the installer script
-.\Install-GcUtils.ps1
+.\Install-geocachingUtils.ps1
 ```
 
 ### Manual Installation
 
 ```bash
 # Install from the repository
-git clone https://github.com/spectraldecomp/gc-utils.git
-cd gc-utils
+git clone https://github.com/spectraldecomp/geocaching-utils.git
+cd geocaching-utils
 pip install -e .
 
 # Or directly from PyPI (once published)
-# pip install gc-utils
+# pip install geocaching-utils
 ```
 
 ## CLI Usage
 
-GC-Utils provides a command-line interface for quick access to common functions. All of the commands use `--mode` to specify the operation:
+geocaching-Utils provides a command-line interface for quick access to common functions. All of the commands use `--mode` to specify the operation:
 
 ### Decode Ciphers
 
 ```bash
 # Caesar cipher (ROT13 by default)
-gc-utils cipher --mode caesar "Urer vf n fvzcyr grkg"
+geocaching-utils cipher --mode caesar "Urer vf n fvzcyr grkg"
 
 # Caesar with specific shift
-gc-utils cipher --mode caesar --shift 3 "Khoor, zruog!"
+geocaching-utils cipher --mode caesar --shift 3 "Khoor, zruog!"
 
 # Vigenère cipher
-gc-utils cipher --mode vigenere --key "geocache" "Vcswymcmwz kc h ztwfvl"
+geocaching-utils cipher --mode vigenere --key "geocache" "Vcswymcmwz kc h ztwfvl"
 
 # Morse code
-gc-utils cipher --mode morse ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."
+geocaching-utils cipher --mode morse ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."
 ```
 
 ### Coordinates and Distance Operations
 
 ```bash
 # Convert to decimal format (default)
-gc-utils coords --mode convert "N 47° 36.123 W 122° 19.456"
+geocaching-utils coords --mode convert "N 47° 36.123 W 122° 19.456"
 
 # Convert to DMS format
-gc-utils coords --mode convert --out-format dms "47.602050, -122.324194"
+geocaching-utils coords --mode convert --out-format dms "47.602050, -122.324194"
 
 # Calculate distance between two points (in km by default)
-gc-utils coords --mode distance "N 47° 36.123 W 122° 19.456" "N 40° 42.768 W 074° 00.360"
+geocaching-utils coords --mode distance "N 47° 36.123 W 122° 19.456" "N 40° 42.768 W 074° 00.360"
 
 # Calculate distance in miles
-gc-utils coords --mode distance --unit mi "47.602050, -122.324194" "40.712800, -74.006000"
+geocaching-utils coords --mode distance --unit mi "47.602050, -122.324194" "40.712800, -74.006000"
 ```
 
 ### Geometric Calculations
 
 ```bash
 # Find the circumcenter (center of a circle passing through three points)
-gc-utils geometry --mode circumcenter "N 47° 36.123 W 122° 19.456" "N 46° 12.345 W 121° 54.321" "N 48° 30.456 W 123° 45.789"
+geocaching-utils geometry --mode circumcenter "N 47° 36.123 W 122° 19.456" "N 46° 12.345 W 121° 54.321" "N 48° 30.456 W 123° 45.789"
 
 # Calculate the circumcenter and its radius
-gc-utils geometry --mode circumcenter --radius --unit mi "N 47° 36.123 W 122° 19.456" "N 46° 12.345 W 121° 54.321" "N 48° 30.456 W 123° 45.789"
+geocaching-utils geometry --mode circumcenter --radius --unit mi "N 47° 36.123 W 122° 19.456" "N 46° 12.345 W 121° 54.321" "N 48° 30.456 W 123° 45.789"
 
 # Find the centroid (center of mass) of multiple coordinates
-gc-utils geometry --mode centroid "N 47° 36.123 W 122° 19.456" "N 46° 12.345 W 121° 54.321" "N 48° 30.456 W 123° 45.789"
+geocaching-utils geometry --mode centroid "N 47° 36.123 W 122° 19.456" "N 46° 12.345 W 121° 54.321" "N 48° 30.456 W 123° 45.789"
 
 # Calculate the midpoint between two coordinates
-gc-utils geometry --mode midpoint "N 47° 36.123 W 122° 19.456" "N 48° 30.456 W 123° 45.789"
+geocaching-utils geometry --mode midpoint "N 47° 36.123 W 122° 19.456" "N 48° 30.456 W 123° 45.789"
 
 # Calculate the area of a triangle
-gc-utils geometry --mode triangle-area --unit km² "N 47° 36.123 W 122° 19.456" "N 46° 12.345 W 121° 54.321" "N 48° 30.456 W 123° 45.789"
+geocaching-utils geometry --mode triangle-area --unit km² "N 47° 36.123 W 122° 19.456" "N 46° 12.345 W 121° 54.321" "N 48° 30.456 W 123° 45.789"
 
 # Find the bounding box of a set of coordinates
-gc-utils geometry --mode bounding-box "N 47° 36.123 W 122° 19.456" "N 46° 12.345 W 121° 54.321" "N 48° 30.456 W 123° 45.789"
+geocaching-utils geometry --mode bounding-box "N 47° 36.123 W 122° 19.456" "N 46° 12.345 W 121° 54.321" "N 48° 30.456 W 123° 45.789"
 ```
 
 ### Puzzle Tools
 
 ```bash
 # Convert ASCII values to text
-gc-utils tools --mode ascii-to-text "72 101 108 108 111"
+geocaching-utils tools --mode ascii-to-text "72 101 108 108 111"
 
 # Convert text to ASCII values
-gc-utils tools --mode text-to-ascii "Hello"
+geocaching-utils tools --mode text-to-ascii "Hello"
 
 # Solve anagrams
-gc-utils tools --mode anagram "listen"
+geocaching-utils tools --mode anagram "listen"
 
 # Convert between letters and numbers (A=1, B=2, etc.)
-gc-utils tools --mode a1z26 "ABC" --direction to-numbers
-gc-utils tools --mode a1z26 "1 2 3" --direction to-letters
+geocaching-utils tools --mode a1z26 "ABC" --direction to-numbers
+geocaching-utils tools --mode a1z26 "1 2 3" --direction to-letters
 
 # Reverse text
-gc-utils tools --mode reverse "Hello World"
-gc-utils tools --mode reverse "Hello World" --words-only
+geocaching-utils tools --mode reverse "Hello World"
+geocaching-utils tools --mode reverse "Hello World" --words-only
 ```
 
 ## Python API Usage
 
-You can also use GC-Utils as a Python library:
+You can also use geocaching-Utils as a Python library:
 
 ```python
-from gc_utils.utils import ciphers, coordinates, puzzle_helpers, geometry
+from geocaching_utils.utils import ciphers, coordinates, puzzle_helpers, geometry
 
 # Decode a cipher
 decoded = ciphers.caesar_decode("Uryyb, jbeyq!", shift=13)
@@ -194,7 +194,7 @@ print(f"Centroid: {geometry.format_point(center_point)}")
 Run the tests with pytest:
 
 ```bash
-cd gc-utils
+cd geocaching-utils
 pytest tests/
 ```
 

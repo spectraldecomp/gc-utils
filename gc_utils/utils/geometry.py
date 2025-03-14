@@ -7,7 +7,7 @@ useful for geocaching puzzles and challenges.
 """
 import math
 from typing import Tuple, List, Optional
-from gc_utils.utils.coordinates import distance, format_coordinate
+from geocaching_utils.utils.coordinates import distance, format_coordinate
 
 
 def circumcenter(point1: Tuple[float, float],

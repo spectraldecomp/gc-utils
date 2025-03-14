@@ -2,7 +2,7 @@
 Tests for the puzzle_helpers module.
 """
 import unittest
-from gc_utils.utils import puzzle_helpers
+from geocaching_utils.utils import puzzle_helpers
 
 
 class PuzzleHelpersTests(unittest.TestCase):

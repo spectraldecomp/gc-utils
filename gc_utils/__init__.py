@@ -1,5 +1,5 @@
 """
-GC-Utils - A collection of utilities for geocaching puzzle solving.
+geocaching-Utils - A collection of utilities for geocaching puzzle solving.
 """
 
 __version__ = '0.1.0'

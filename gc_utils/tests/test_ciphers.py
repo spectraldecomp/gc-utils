@@ -2,7 +2,7 @@
 Tests for the ciphers module.
 """
 import unittest
-from gc_utils.utils import ciphers
+from geocaching_utils.utils import ciphers
 
 
 class CipherTests(unittest.TestCase):

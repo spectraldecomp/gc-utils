@@ -2,7 +2,7 @@
 CLI command for geometric calculations on coordinates.
 """
 import argparse
-from gc_utils.utils import coordinates, geometry
+from geocaching_utils.utils import coordinates, geometry
 
 
 def register_subcommand(subparsers):

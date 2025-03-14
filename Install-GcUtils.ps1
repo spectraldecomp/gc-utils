@@ -1,11 +1,11 @@
-# Install-GcUtils.ps1
+# Install-geocachingUtils.ps1
 #
-# A PowerShell script to install gc-utils and set up the environment
+# A PowerShell script to install geocaching-utils and set up the environment
 #
 # Usage:
 #   1. Open PowerShell
-#   2. Navigate to the gc-utils directory
-#   3. Run: .\Install-GcUtils.ps1
+#   2. Navigate to the geocaching-utils directory
+#   3. Run: .\Install-geocachingUtils.ps1
 #
 
 [CmdletBinding()]
@@ -31,7 +31,7 @@ function Write-ColorOutput {
 
 # Display header
 Write-ColorOutput "====================================" "Cyan"
-Write-ColorOutput "   GC-Utils Installation Script     " "Cyan"
+Write-ColorOutput "   geocaching-Utils Installation Script     " "Cyan"
 Write-ColorOutput "====================================" "Cyan"
 Write-ColorOutput "`n"
 
@@ -99,8 +99,8 @@ if ($InstallInVenv) {
     }
 }
 
-# Install gc-utils
-Write-ColorOutput "Installing gc-utils..." "Yellow"
+# Install geocaching-utils
+Write-ColorOutput "Installing geocaching-utils..." "Yellow"
 if ($DevelopmentMode) {
     python -m pip install -e .
 } else {
@@ -111,7 +111,7 @@ if ($LASTEXITCODE -ne 0) {
     Write-ColorOutput "Installation failed." "Red"
     exit 1
 } else {
-    Write-ColorOutput "gc-utils installed successfully!" "Green"
+    Write-ColorOutput "geocaching-utils installed successfully!" "Green"
 }
 
 # Run tests if requested
@@ -130,26 +130,26 @@ if ($RunTests) {
 # Display usage information
 Write-ColorOutput "`n" 
 Write-ColorOutput "====================================" "Cyan"
-Write-ColorOutput "        GC-Utils Quick Start        " "Cyan"
+Write-ColorOutput "        geocaching-Utils Quick Start        " "Cyan"
 Write-ColorOutput "====================================" "Cyan"
 Write-ColorOutput "`n"
 Write-ColorOutput "Decode a cipher:" "White"
-Write-ColorOutput "  gc-utils cipher --method caesar `"Uryyb, jbeyq!`"" "Gray"
+Write-ColorOutput "  geocaching-utils cipher --method caesar `"Uryyb, jbeyq!`"" "Gray"
 Write-ColorOutput "`n"
 Write-ColorOutput "Convert coordinates:" "White"
-Write-ColorOutput "  gc-utils coords `"N 47° 36.123 W 122° 19.456`"" "Gray"
+Write-ColorOutput "  geocaching-utils coords `"N 47° 36.123 W 122° 19.456`"" "Gray"
 Write-ColorOutput "`n"
 Write-ColorOutput "Calculate distance:" "White"
-Write-ColorOutput "  gc-utils distance `"N 47° 36.123 W 122° 19.456`" `"N 40° 42.768 W 074° 00.360`"" "Gray"
+Write-ColorOutput "  geocaching-utils distance `"N 47° 36.123 W 122° 19.456`" `"N 40° 42.768 W 074° 00.360`"" "Gray"
 Write-ColorOutput "`n"
 Write-ColorOutput "Calculate geometry:" "White"
-Write-ColorOutput "  gc-utils geometry circumcenter `"N 47° 36.123 W 122° 19.456`" `"N 46° 12.345 W 121° 54.321`" `"N 48° 30.456 W 123° 45.789`"" "Gray"
+Write-ColorOutput "  geocaching-utils geometry circumcenter `"N 47° 36.123 W 122° 19.456`" `"N 46° 12.345 W 121° 54.321`" `"N 48° 30.456 W 123° 45.789`"" "Gray"
 Write-ColorOutput "`n"
 Write-ColorOutput "Use puzzle tools:" "White"
-Write-ColorOutput "  gc-utils tools ascii-to-text `"72 101 108 108 111`"" "Gray"
+Write-ColorOutput "  geocaching-utils tools ascii-to-text `"72 101 108 108 111`"" "Gray"
 Write-ColorOutput "`n"
 Write-ColorOutput "For more information, run:" "White"
-Write-ColorOutput "  gc-utils --help" "Gray"
-Write-ColorOutput "  gc-utils <command> --help" "Gray"
+Write-ColorOutput "  geocaching-utils --help" "Gray"
+Write-ColorOutput "  geocaching-utils <command> --help" "Gray"
 Write-ColorOutput "`n"
 Write-ColorOutput "Happy geocaching!" "Green" 

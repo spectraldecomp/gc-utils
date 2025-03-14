@@ -2,7 +2,7 @@
 CLI command for coordinate conversion and distance calculation.
 """
 import argparse
-from gc_utils.utils import coordinates
+from geocaching_utils.utils import coordinates
 
 
 def register_subcommand(subparsers):

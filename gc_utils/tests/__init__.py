@@ -1,3 +1,3 @@
 """
-Tests for gc-utils package.
+Tests for geocaching-utils package.
 """

@@ -1,3 +1,3 @@
 """
-Command line interface for GC-Utils.
+Command line interface for geocaching-Utils.
 """

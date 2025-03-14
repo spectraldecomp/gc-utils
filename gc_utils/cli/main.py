@@ -1,21 +1,21 @@
 """
-Main CLI entry point for gc-utils.
+Main CLI entry point for geocaching-utils.
 """
 import argparse
 import sys
 import importlib
-from gc_utils import __version__
+from geocaching_utils import __version__
 
 
 def main():
-    """Main CLI entry point for gc-utils."""
+    """Main CLI entry point for geocaching-utils."""
     parser = argparse.ArgumentParser(
-        prog="gc-utils",
+        prog="geocaching-utils",
         description="Geocaching puzzle utilities and tools"
     )
 
     parser.add_argument('--version', action='version',
-                        version=f'gc-utils {__version__}')
+                        version=f'geocaching-utils {__version__}')
 
     subparsers = parser.add_subparsers(
         dest='command', help='Available commands')
@@ -32,7 +32,8 @@ def main():
     for command, module_name in command_to_module.items():
         try:
             # Import the module
-            module = importlib.import_module(f'gc_utils.cli.{module_name}')
+            module = importlib.import_module(
+                f'geocaching_utils.cli.{module_name}')
             # Register its subcommand
             if hasattr(module, 'register_subcommand'):
                 module.register_subcommand(subparsers)
@@ -51,7 +52,7 @@ def main():
 
     # Import the module for the selected command
     try:
-        module = importlib.import_module(f'gc_utils.cli.{module_name}')
+        module = importlib.import_module(f'geocaching_utils.cli.{module_name}')
 
         # Execute the command
         if hasattr(module, 'handle'):

@@ -2,7 +2,7 @@
 Tests for the coordinates module.
 """
 import unittest
-from gc_utils.utils import coordinates
+from geocaching_utils.utils import coordinates
 
 
 class CoordinateTests(unittest.TestCase):

@@ -2,7 +2,7 @@ SAMPLE GEOCACHING PUZZLE
 =============================
 
 This file contains various example encoded texts and coordinates that
-can be used to test gc-utils functionality.
+can be used to test geocaching-utils functionality.
 
 ---------------------------------------------------------------------
 CAESAR CIPHER (ROT13):
