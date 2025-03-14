@@ -1,4 +1,4 @@
-![logo](https://github.com/spectraldecomp/geocaching-utils/blob/main/geocaching_utils/data/public/geocaching-utils-logo.png)
+![logo](geocaching_utils/data/public/geocaching-utils-logo.png)
 ---
 geocaching-utils is a Python package offering a suite of tools for Geocaching puzzle creation/solving and GIS-related tasks.
 
